@@ -1,14 +1,14 @@
 # jackandjill
 Android Build Experiments
 
-##### Bare minimum compile-able and install-able Android Application
+### Bare minimum compile-able and install-able Android Application
  Bare minimum android application should consist of a AndroidManifest.xml,
  may be an Activity or other android component, and may be a launcher for app icon in res.
  
  See directory *bare_minimum_android_app* for example.
   
 
-##### Building APK with Android SDK Command line Tools
+### Building APK with Android SDK Command line Tools
 
 Creating apk using command line tools from Android Sdk consists of the below steps. 
 For reference see directory *build_with_sdk_tools*
@@ -82,4 +82,16 @@ using phone packagemanager.
 - https://czak.pl/2016/01/13/minimal-android-project.html
 - http://tools.android.com/tech-docs/jackandjill#TOC-Compilation-support
 - https://github.com/czak/minimal-android-project
-- https://medium.com/authmane512/how-to-build-an-apk-from-command-line-without-ide-7260e1e22676
+- https://medium.com/authmane512/how-to-build-an-apk-from-command-line-without-ide-7260e1e22676  
+
+
+### Building with Gradle without Wrapper  
+Without wrapper it's very easy to build apk, we just have to include a `build.gradle` in the root of project with contents as shown in *build_with_gradle_without_wrapper* directory.  
+
+To Build, just use `gradle assembleDebug` assuming, gradle is installed and is at `%PATH%`.  
+To install gradle, just download it as binary and add the bin directory to `%PATH%`, or use `scoop.sh`. (`gradle -v`)  
+Note: example above is built using gradle v5.4.1 and android plugin for gradle v3.4.0.  
+  
+**References**  
+- https://scoop.sh/
+- https://developer.android.com/studio/releases/#aapt2_gmaven
