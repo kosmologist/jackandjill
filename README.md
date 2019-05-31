@@ -19,6 +19,14 @@ For reference see directory *build_with_sdk_tools*
 4. Sign
 5. ZipAlign
 
+- **Pre-requisites**  
+1. Following command line instructions has been tested on Windows environment (Windows 10)
+2. Assuming you have `%ANDROID_HOME%` environment variable has been set to Android sdk path
+ which was in my case "C:\Users\m.qasim\AppData\Local\Android\Sdk"
+3. Assuming you have buildTools/28.0.x/ is at your `%PATH%` for easily running `appt/dx/jarsigner/zilalign` etc.  
+4. Also obviously, `jdk` at your `%PATH%` (i've added the studio embedded jdk to `%PATH%`)  
+To verify environment variables on windows, use `echo %PATH%` or `echo %ANDROID_HOME%`
+
 - **Generate** `R.java`   
 `R.java` contains all the id's generated from resources to be referenced in code.
 It can be generated using `aapt` command line tool available in `android_sdk/build-tools/28.0.3/appt`.  
@@ -68,3 +76,10 @@ using phone packagemanager.
 
 `adb install handbuilt-aligned.apk`
  
+ 
+**References**  
+- https://czak.pl/2016/05/31/handbuilt-android-project.html
+- https://czak.pl/2016/01/13/minimal-android-project.html
+- http://tools.android.com/tech-docs/jackandjill#TOC-Compilation-support
+- https://github.com/czak/minimal-android-project
+- https://medium.com/authmane512/how-to-build-an-apk-from-command-line-without-ide-7260e1e22676
